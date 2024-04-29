@@ -47,5 +47,19 @@
     <button id="animationAllbtn">
         <span></span>
     </button>
+    <script>
+        // documednt.body
+        // document.head
+    
+        //화면(document)의 아이디가 animationAllbtn 객체를 클릭하면 경고창 떠라 <라는 명령어를 내린 것
+
+        //화면(document)의 아이디가 animationAllbtn 객체 명령 받아라 
+        document.getElementById("animationAllbtn").addEventListener('click', function(){
+            document.getElementById("animationAllbtn").classList.add('show');
+            // document.body.classList = "show action popup";
+        })
+
+
+    </script>
 </body>
 </html>
