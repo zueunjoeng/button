@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position absolute/ click 이벤트 / transform</title>
+    <style>
+        #animationAllbtn{
+            position:absolute;
+            border : 0;
+            width: 2.8rem;
+            height: 1.5rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color : transparent;
+        }
+        #animationAllbtn:before{
+            content: "";
+            display: block;
+            height: 3px;
+            background-color: black;
+        }
+        #animationAllbtn span{
+            display: block;
+            margin: 8px 0;
+            height: 3px;
+            background-color: black;
+        }
+        #animationAllbtn:after{
+            content: "";
+            display: block;
+            height: 3px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="animationAllbtn">
+        <span></span>
+    </button>
+</body>
+</html>
