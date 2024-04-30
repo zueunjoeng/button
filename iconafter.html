@@ -7,19 +7,37 @@
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+
+    <style>
+        /* 활성화된 상태에서 bi-x-lg 아이콘을 빨간색으로 변경 */
+        /* #allBtn.active.bi-x-lg {
+            color: red;
+        } */
+
+        .text-red{
+            color: red !important;
+        }
+        .text-green{
+            color: green !important;
+        }
+        .text-yellow{
+            color: yellow !important;
+        }
+    </style>
+    
 </head>
 
+
 <body>
-    <i class="bi bi-list fs-1" id="allBtn"></i>
+    <i class="bi bi-list fs-1 active" id="allBtn"></i>
     <!-- bi-x-lg  -->
 
     <script>
         const allBtn = document.getElementById('allBtn');
          //const allBtn = 은 저장하는것. allBtn을 document.get~ 으로 저장하자. 가볍고 태그 최소화하자
         //백엔드는 대소문자 구분 안함 / 프론트는 파이썬, 대소문자 구별(css)한다. 
-       "allBtn".addEventListener('click', function (){
-
+       allBtn.addEventListener('click', function (){
+            allBtn.classList.toggle("bi-x-lg")
         })
 
     </script>
