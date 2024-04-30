@@ -29,15 +29,28 @@
 
 
 <body>
-    <i class="bi bi-list fs-1 active" id="allBtn"></i>
+    <i class="bi bi-list fs-1" id="allBtn"></i>
     <!-- bi-x-lg  -->
 
     <script>
         const allBtn = document.getElementById('allBtn');
          //const allBtn = 은 저장하는것. allBtn을 document.get~ 으로 저장하자. 가볍고 태그 최소화하자
         //백엔드는 대소문자 구분 안함 / 프론트는 파이썬, 대소문자 구별(css)한다. 
+        let status = true;
+        // if가 먼저 터져야하니까
        allBtn.addEventListener('click', function (){
-            allBtn.classList.toggle("bi-x-lg")
+            if(status){
+            allBtn.classList = "bi bi-list fs-1 bi-x-lg text-red";
+            status = false;
+            // true를 실행하고 다시 돌아갈 수 있게 status = false; 넣어준다.
+            }else{
+            allBtn.classList = "bi bi-list fs-1";
+            status = true;
+            }
+
+            // allBtn.classList = "bi-x-lg" 만 넣으면 옷이 벗겨짐. 초기화가 된다.
+            // allBtn.classList += "bi-x-lg";
+            // += 추가로 들어간다는 의미 - 추가대입식
         })
 
     </script>
