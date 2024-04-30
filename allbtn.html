@@ -42,7 +42,7 @@
             width: 100%;
             transition:0.5s;
         }
-        /*클릭이벤트를 통해서 show를 줬다. 엄마 이름에 show가 없을 때 width가 100이고 있을때 0 */
+        /*클릭이벤트를 통해서 show를 줬다. 상위태그의 이름에 show가 없을 때 width가 100이고 있을때는 0 */
         #animationAllbtn.show span{
             width: 0;
         }
@@ -53,7 +53,6 @@
         #animationAllbtn.show:after{
             transform: rotate(45deg);
             top:13px;
-/* show:before/after은 요소 검사를 통해 보면서 설정하는게 좋음. 디자이너가 화면을 보면서 제어해줘야함*/
         }
     </style>
 </head>
@@ -63,13 +62,7 @@
         <span></span>
     </button>
     <script>
-        // documednt.body
-        // document.head
-    
-        //화면(document)의 아이디가 animationAllbtn 객체를 클릭하면 경고창 떠라 <라는 명령어를 내린 것
-
-        //화면(document)의 아이디가 animationAllbtn 객체 명령 받아라 
-        document.getElementById("animationAllbtn").addEventListener('click', function(){
+       document.getElementById("animationAllbtn").addEventListener('click', function(){
             document.getElementById("animationAllbtn").classList.add('show');
             // document.body.classList = "show action popup";
         })
@@ -77,7 +70,7 @@
 document.getElementById("animationAllbtn").addEventListener('click', function(){
     status = !status;
     document.getElementById("animationAllbtn").classList.toggle("show", !status);
-});
+})
     </script>
 </body>
 </html>
