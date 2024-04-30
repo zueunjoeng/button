@@ -9,12 +9,40 @@
         .img_fluid{
             max-width: 100%
         }
+        #mainBanner{
+            background-image: url("./img/bg.png");
+            height: 100vw;
+            max-height:800px;
+            /* 이미지가 1920*800이라서 800이상은 넘어가지 않겠어 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 100%;
+            transition: 0.5s;
+            color: white;
+            font-size: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+
+        #mainBanner:hover{
+            background-size: auto 150%;
+        }
+
+        @media (max-width:991px){
+            h2 span{
+                 display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div id="mainBanner">
-        <img src="./img/bg.png" class="img_fluid" alt="">
+        <!-- <img src="./img/bg.png" class="img_fluid" alt=""> --> 
+        <h2>삼양홀딩스<span>에 오신 것을 환영합니다.</span></h2>
     </div>
+   
 </body>
 </html>
